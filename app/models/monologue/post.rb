@@ -24,7 +24,7 @@ class Monologue::Post < ActiveRecord::Base
 
   def tag!(tags_attr)
     self.tags = tags_attr.map(&:strip).reject(&:blank?).map do |tag|
-      Monologue::Tag.where(name: tag).first_or_create
+      Monologue::Tag.where(name: tag.downcase).first_or_create
     end
   end
 
