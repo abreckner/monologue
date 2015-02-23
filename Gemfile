@@ -28,3 +28,5 @@ end
 gem 'coveralls', require: false
 
 gem 'pg'
+
+gem 'responders', '~> 2.0'
