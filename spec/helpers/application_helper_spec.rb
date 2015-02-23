@@ -41,6 +41,7 @@ describe Monologue::ApplicationHelper do
   end
 
   describe "social icons+links" do
+    skip "we don't use this"
     context "render if enabled" do
       it "generate rss <link> tag for <head>" do
         helper.rss_head_link.should eq "<link href=\"http://test.host/monologue/feed\" rel=\"alternate\" title=\"RSS\" type=\"application/rss+xml\" />"
