@@ -41,34 +41,35 @@ describe Monologue::ApplicationHelper do
   end
 
   describe "social icons+links" do
-    skip "we don't use this"
-    context "render if enabled" do
-      it "generate rss <link> tag for <head>" do
-        helper.rss_head_link.should eq "<link href=\"http://test.host/monologue/feed\" rel=\"alternate\" title=\"RSS\" type=\"application/rss+xml\" />"
-      end
+    skip "we don't use this" do
+      context "render if enabled" do
+        it "generate rss <link> tag for <head>" do
+          helper.rss_head_link.should eq "<link href=\"http://test.host/monologue/feed\" rel=\"alternate\" title=\"RSS\" type=\"application/rss+xml\" />"
+        end
 
-      it "generate rss icon" do
-        helper.rss_icon.should eq "<a class=\"social\" href=\"http://test.host/monologue/feed\" target=\"_blank\"><i class=\"foundicon-rss\"></i></a>"
-      end
+        it "generate rss icon" do
+          helper.rss_icon.should eq "<a class=\"social\" href=\"http://test.host/monologue/feed\" target=\"_blank\"><i class=\"foundicon-rss\"></i></a>"
+        end
 
-      it "generate github" do
-        helper.github_icon.should eq "<a class=\"social\" href=\"http://github.com/#{Monologue::Config.github_username}\" target=\"_blank\"><i class=\"foundicon-github\"></i></a>"
-      end
+        it "generate github" do
+          helper.github_icon.should eq "<a class=\"social\" href=\"http://github.com/#{Monologue::Config.github_username}\" target=\"_blank\"><i class=\"foundicon-github\"></i></a>"
+        end
 
-      it "generate twitter" do
-        helper.twitter_icon.should eq "<a class=\"social\" href=\"http://twitter.com/#{Monologue::Config.twitter_username}\" target=\"_blank\"><i class=\"foundicon-twitter\"></i></a>"
-      end
+        it "generate twitter" do
+          helper.twitter_icon.should eq "<a class=\"social\" href=\"http://twitter.com/#{Monologue::Config.twitter_username}\" target=\"_blank\"><i class=\"foundicon-twitter\"></i></a>"
+        end
 
-      it "generate linkedin" do
-        helper.linkedin_icon.should eq "<a class=\"social\" href=\"#{Monologue::Config.linkedin_url}\" target=\"_blank\"><i class=\"foundicon-linkedin\"></i></a>"
-      end
+        it "generate linkedin" do
+          helper.linkedin_icon.should eq "<a class=\"social\" href=\"#{Monologue::Config.linkedin_url}\" target=\"_blank\"><i class=\"foundicon-linkedin\"></i></a>"
+        end
 
-      it "generate googleplus" do
-        helper.googleplus_icon.should eq "<a class=\"social\" href=\"#{Monologue::Config.google_plus_account_url}\" target=\"_blank\"><i class=\"foundicon-google-plus\"></i></a>"
-      end
+        it "generate googleplus" do
+          helper.googleplus_icon.should eq "<a class=\"social\" href=\"#{Monologue::Config.google_plus_account_url}\" target=\"_blank\"><i class=\"foundicon-google-plus\"></i></a>"
+        end
 
-      it "generate facebook" do
-        helper.facebook_icon.should eq "<a class=\"social\" href=\"#{Monologue::Config.facebook_url}\" target=\"_blank\"><i class=\"foundicon-facebook\"></i></a>"
+        it "generate facebook" do
+          helper.facebook_icon.should eq "<a class=\"social\" href=\"#{Monologue::Config.facebook_url}\" target=\"_blank\"><i class=\"foundicon-facebook\"></i></a>"
+        end
       end
     end
 
